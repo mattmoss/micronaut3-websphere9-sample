@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: sample
+  server:
+    context-path: "/sample"
+netty:
+  default:
+    allocator:
+      max-order: 3
