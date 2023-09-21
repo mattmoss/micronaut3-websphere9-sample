@@ -5,9 +5,12 @@
 Currently, building a Micronaut application as a war and attempting to run it on IBM WebSphere 9 fails with the following exception.
 
 ```
-io.micronaut.context.exceptions.NoSuchBeanException: No bean of type [io.micronaut.context.event.ApplicationEventPublisher<io.micronaut.context.event.StartupEvent>] exists.
+io.micronaut.context.exceptions.NoSuchBeanException:
+No bean of type [io.micronaut.context.event.ApplicationEventPublisher<io.micronaut.context.event.StartupEvent>] exists.
 
-Make sure the bean is not disabled by bean requirements (enable trace logging for 'io.micronaut.context.condition' to check) and if the bean is enabled then ensure the class is declared a bean and annotation processing is enabled (for Java and Kotlin the 'micronaut-inject-java' dependency should be configured as an annotation processor)
+Make sure the bean is not disabled by bean requirements (enable trace logging for 'io.micronaut.context.condition'
+to check) and if the bean is enabled then ensure the class is declared a bean and annotation processing is enabled
+(for Java and Kotlin the 'micronaut-inject-java' dependency should be configured as an annotation processor)
 ```
 
 This is similar to a [previous issue with Oracle WebLogic](https://github.com/micronaut-projects/micronaut-core/issues/8636).
